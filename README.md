@@ -14,7 +14,6 @@
 
 As a contractor, I want to be matched automatically to a new assignment based on my CV, so that I can save time and focus on work.
 
-
 **Solution design:**
 * Create an agent that:
   * Takes the user's CV as input (hint: write a tool that can read a PDF file as markdown using `docling`)
