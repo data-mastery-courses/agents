@@ -1,6 +1,6 @@
 # Agentic AI
 
-## Setup
+## Setup python environment
 
 1. Clone the repository `git clone https://github.com/data-mastery-courses/agents.git`
 2. Make sure you have uv installed: https://docs.astral.sh/uv/getting-started/installation/
@@ -10,21 +10,22 @@
 6. Copy .env.example to .env and fill in your new API key
 7. Run `uv run agents/example_agent.py`, if everything is fine, you should see the output in the terminal.
 
-# User Story: Interview Prep Agent
+## Setup n8n
 
-As a contractor, I want to be matched automatically to a new assignment based on my CV, so that I can save time and focus on work.
+Running n8n is easiest using Node.js or using Docker. If you have neither of those, consider installing Node.js: https://nodejs.org/en/download
 
-**Solution design:**
-* Create an agent that:
-  * Takes the user's CV as input (hint: write a tool that can read a PDF file as markdown using `docling`)
-  * Uses the internet to find matching job vacancies (hint: DuckDuckGo)
-  * Analyzes the best matching vacancy (hint: Crawl4ai)
-  * Researches the company (hint: Crawl4ai)
-  * Writes an interview preparation plan:
-    * Explain why the user is a good fit for the vacancy
-    * Generate personalized talking points for the interview
-    * Suggest questions to ask the interviewer
-* Use `agno` to build the agent
-* Use Gemini Flash 2.5 as the LLM
+### In case you have Node.js installed
 
-Start from this repo: [github.com/data-mastery-courses/agents](https://github.com/data-mastery-courses/agents)
+Run:
+```bash
+npx n8n
+```
+
+### In case you have docker installed
+To run a lightweight n8n docker container run the following command:
+
+```bash
+docker run -it --rm --name n8n -p 5678:5678 -v ./data_cvs:/data_cvs docker.n8n.io/n8nio/n8n
+```
+
+Note that the `./data_cvs` directory is mounted to the container's `/data_cvs` directory, which is where n8n will read the CV PDFs from.

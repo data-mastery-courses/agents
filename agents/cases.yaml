@@ -1,0 +1,252 @@
+cases:
+  - name: Junior Developer applying for Senior Software Engineer
+    inputs:
+      cv_text: "John Smith
+
+        Summary:  Recent graduate with a Bachelor's in Computer Science.  Proficient
+        in Java, Python, and basic web development (HTML, CSS, JavaScript).  Limited
+        experience with frameworks.
+
+        Experience:  Intern at Acme Corp (6 months) - Developed basic web applications
+        using Python and Django.
+
+        Education: Bachelor of Science in Computer Science, University of California,
+        Berkeley (2023)."
+      job_vacancy_text: "Senior Software Engineer
+
+        Responsibilities: Design, develop, and maintain complex software systems.  Requires
+        5+ years of experience with Java or Python, experience with cloud platforms
+        (AWS, Azure, GCP), and strong problem-solving skills. Experience with CI/CD
+        pipelines and Agile methodologies is essential. Leadership experience is preferred."
+    metadata: null
+    expected_output:
+      explanation:
+        CV lacks the required experience and skills for a Senior Engineer
+        role.  Limited professional experience and no cloud experience.
+      classification: Very Bad
+    evaluators:
+      - EqualsExpected
+  - name: Data Scientist applying for Data Scientist
+    inputs:
+      cv_text: "Alice Johnson
+
+        Summary: Data Scientist with 3+ years of experience in machine learning, statistical
+        modeling, and data analysis.  Proficient in Python (Pandas, Scikit-learn, TensorFlow),
+        R, and SQL.  Experience with cloud computing and data visualization tools.
+
+        Experience: Data Scientist, Beta Analytics (3 years) - Developed machine learning
+        models for fraud detection. Led data analysis projects and presented findings
+        to stakeholders.
+
+        Education: Master of Science in Statistics, Stanford University (2020)."
+      job_vacancy_text: "Data Scientist
+
+        Responsibilities: Develop and implement machine learning models, perform data
+        analysis, and build data visualizations.  Requires experience with Python (Pandas,
+        Scikit-learn, TensorFlow), experience with cloud computing (AWS, Azure, GCP),
+        and strong statistical modeling skills.  Must have experience with presenting
+        results to stakeholders."
+    metadata: null
+    expected_output:
+      explanation:
+        CV matches the job description very well.  Relevant experience, skills,
+        and education are all aligned.
+      classification: Very Good
+    evaluators:
+      - EqualsExpected
+  - name: Product Manager applying for Product Manager
+    inputs:
+      cv_text: "Bob Williams
+
+        Summary: Experienced Product Manager with a proven track record of launching
+        successful products.  Expertise in product strategy, market research, and user
+        experience.  Proficient in Agile methodologies and communication skills.
+
+        Experience: Product Manager, Gamma Solutions (5 years) - Led the development
+        and launch of three successful products.  Managed product roadmaps, prioritized
+        features, and collaborated with engineering and marketing teams.
+
+        Education: Master of Business Administration, Harvard Business School (2018)."
+      job_vacancy_text: "Product Manager
+
+        Responsibilities: Define and drive product strategy, manage product roadmaps,
+        and collaborate with cross-functional teams to deliver successful products.
+        Requires 5+ years of experience in product management, experience with Agile
+        methodologies, and strong communication skills."
+    metadata: null
+    expected_output:
+      explanation:
+        The CV aligns well with the job description. Relevant skills and
+        experience are apparent.
+      classification: Good
+    evaluators:
+      - EqualsExpected
+  - name: Frontend Developer applying for Backend Engineer
+    inputs:
+      cv_text: "David Lee
+
+        Summary: Frontend Developer with 4 years of experience building responsive and
+        user-friendly web interfaces using React, JavaScript, HTML, and CSS.
+
+        Experience: Frontend Developer, Delta Corp (4 years) - Developed and maintained
+        frontend components, optimized website performance, and ensured cross-browser
+        compatibility.
+
+        Education: Bachelor of Science in Computer Science, UCLA (2019)"
+      job_vacancy_text: "Backend Engineer
+
+        Responsibilities: Design, develop, and maintain backend systems using Python,
+        Django, and relational databases (PostgreSQL). Requires experience with RESTful
+        APIs, and experience with cloud platforms (AWS, Azure, GCP)."
+    metadata: null
+    expected_output:
+      explanation:
+        The CV is not a good fit due to a lack of backend development experience
+        and relevant technologies.
+      classification: Bad
+    evaluators:
+      - EqualsExpected
+  - name: Data Analyst applying for Data Scientist (entry level)
+    inputs:
+      cv_text: "Sarah Chen
+
+        Summary: Data Analyst with 2 years of experience in data analysis and reporting.  Proficient
+        in SQL, Excel, and data visualization tools (Tableau, Power BI).
+
+        Experience: Data Analyst, Epsilon Analytics (2 years) - Performed data analysis,
+        generated reports, and created data visualizations.  No experience with Machine
+        Learning or statistical modeling.
+
+        Education: Bachelor of Science in Statistics, UC San Diego (2021)"
+      job_vacancy_text: "Data Scientist (Entry Level)
+
+        Responsibilities: Build and deploy machine learning models.  Requires experience
+        with Python (Pandas, Scikit-learn), statistical modeling experience is a must,
+        experience with cloud computing (AWS, Azure, GCP)."
+    metadata: null
+    expected_output:
+      explanation:
+        CV only has Data Analyst experience.  Lacks experience with Machine
+        Learning, models and cloud computing.
+      classification: Mediocre
+    evaluators:
+      - EqualsExpected
+  - name: AI Engineer for Machine Learning Engineer
+    inputs:
+      cv_text: "Mark Wilson
+
+        Summary: AI Engineer experienced in building and deploying deep learning models.
+        Experienced with NLP, computer vision, and reinforcement learning.  Strong proficiency
+        in Python and PyTorch.
+
+        Experience: AI Engineer, Zeta Innovations (4 years) - Designed and implemented
+        deep learning models for image recognition and natural language processing.
+        Deployed models on cloud platforms. Managed a team of 3 AI engineers."
+      job_vacancy_text: "Machine Learning Engineer
+
+        Responsibilities: Build and deploy machine learning models.  Experience with
+        model training, deployment, and optimization is preferred. Proficiency in Python,
+        PyTorch, and experience with cloud platforms (AWS, Azure, GCP)."
+    metadata: null
+    expected_output:
+      explanation:
+        CV closely matches the job description. Has necessary skills and
+        relevant experience.
+      classification: Good
+    evaluators:
+      - EqualsExpected
+  - name: Project Manager for Software Engineer
+    inputs:
+      cv_text: "Emily Davis
+
+        Summary: Project Manager experienced in managing software development projects,
+        ensuring project completion on time and within budget. Strong project management
+        skills, experience with Agile and Scrum, and excellent communication.
+
+        Experience: Project Manager, Omega Systems (5 years) - Managed software development
+        projects. Managed project timelines and resources. Maintained documentation."
+      job_vacancy_text: "Software Engineer
+
+        Responsibilities: Design and develop software. Require strong programming skills,
+        and experience with Agile and Scrum."
+    metadata: null
+    expected_output:
+      explanation:
+        The CV is not a good fit, given that the applicant does not have
+        relevant coding experience for this role.
+      classification: Very Bad
+    evaluators:
+      - EqualsExpected
+  - name: Network Engineer applying for DevOps Engineer
+    inputs:
+      cv_text: "Chris Brown
+
+        Summary: Network Engineer with solid networking skills, including configuration,
+        troubleshooting, and maintenance of network infrastructure. Experienced with
+        network security and administration of routers and switches.
+
+        Experience: Network Engineer, Rho Technologies (4 years) - Designed, implemented,
+        and maintained network infrastructure. Ensured network security and performed
+        network troubleshooting."
+      job_vacancy_text: "DevOps Engineer
+
+        Responsibilities: Automate software build and deployment processes. Experience
+        in scripting (Python, Bash), configuration management tools (Ansible, Chef),
+        containerization (Docker, Kubernetes), and cloud platforms (AWS, Azure, GCP)
+        is preferred."
+    metadata: null
+    expected_output:
+      explanation:
+        The CV does not mention the needed skillset for the DevOps engineer
+        role.
+      classification: Very Bad
+    evaluators:
+      - EqualsExpected
+  - name: Software Engineer with mobile experience for Backend role
+    inputs:
+      cv_text: "Kevin Miller
+
+        Summary: Software Engineer with 3 years of experience in mobile app development
+        (iOS and Android). Proficient in Swift, Kotlin, and mobile app architecture.
+
+        Experience: Software Engineer, Sigma Apps (3 years) - Developed and maintained
+        mobile applications. Implemented features and fixed bugs.
+
+        Education: Bachelor of Science in Computer Science, Purdue University (2020)"
+      job_vacancy_text: "Backend Engineer
+
+        Responsibilities: Develop and maintain server-side applications using Java and
+        Spring Boot. Requires experience with REST APIs and relational databases."
+    metadata: null
+    expected_output:
+      explanation:
+        CV indicates no specific backend skills that match the role description,
+        and lacks experience with relevant backend technologies like Java or Spring
+        Boot.
+      classification: Bad
+    evaluators:
+      - EqualsExpected
+  - name: Data Engineer for Data Scientist
+    inputs:
+      cv_text: "Jessica Garcia
+
+        Summary: Data Engineer with 3 years of experience in designing and building
+        data pipelines. Proficient in SQL, Python, and cloud platforms (AWS, Azure,
+        GCP).
+
+        Experience: Data Engineer, Lambda Data Solutions (3 years) - Developed and maintained
+        ETL pipelines. Managed data warehousing and data lakes.
+
+        Education: Master of Science in Computer Science, University of Texas (2020)"
+      job_vacancy_text: "Data Scientist
+
+        Responsibilities: Build and implement machine learning models. Requires experience
+        with Python, statistical modeling experience and Machine Learning experience."
+    metadata: null
+    expected_output:
+      explanation:
+        The CV does not match the role. No explicit machine learning experience
+        is mentioned.
+      classification: Bad
+    evaluators:
+      - EqualsExpected
